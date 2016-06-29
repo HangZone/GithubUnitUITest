@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -30,16 +30,36 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiR-Vr-Bdd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex2-sx-sp5">
+                                <rect key="frame" x="279" y="534" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YKm-52-5f0">
+                                <rect key="frame" x="227" y="476" width="146" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="I7Q-Zq-n35"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="4pv-ch-FZJ"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ex2-sx-sp5" firstAttribute="top" secondItem="YKm-52-5f0" secondAttribute="bottom" constant="28" id="Fte-Zo-1E2"/>
                             <constraint firstItem="Ngn-8L-kNW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K0d-KP-nwN"/>
                             <constraint firstItem="Ngn-8L-kNW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKI-jn-fat"/>
+                            <constraint firstItem="ex2-sx-sp5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fw2-g1-prg"/>
+                            <constraint firstItem="YKm-52-5f0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lH5-F5-p3g"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ex2-sx-sp5" secondAttribute="bottom" constant="45" id="p3T-yW-Qxe"/>
                             <constraint firstItem="4bo-s8-RHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xFz-KL-LOe"/>
                             <constraint firstItem="Ngn-8L-kNW" firstAttribute="top" secondItem="4bo-s8-RHY" secondAttribute="bottom" constant="63" id="zAo-Nm-bg5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="sliderLabel" destination="ex2-sx-sp5" id="VT9-dl-shq"/>
                         <outlet property="theLabel" destination="4bo-s8-RHY" id="fyd-4o-RHT"/>
                     </connections>
                 </viewController>

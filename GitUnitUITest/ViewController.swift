@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var theLabel: UILabel!
     
+    @IBOutlet weak var sliderLabel: UILabel!
     @IBAction func buttonPressed(sender: AnyObject) {
         if (theLabel.text == "Label") {
             theLabel.text = "Not a Label"
@@ -29,6 +30,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sliderMove(sender: UISlider) {
+        let currentValue = Int(sender.value * 10)
+        sliderLabel.text = "\(currentValue)"
+    }
 
 }
 
