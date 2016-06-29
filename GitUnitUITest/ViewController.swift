@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var theLabel: UILabel!
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        if (theLabel.text == "Label") {
+            theLabel.text = "Not a Label"
+        } else {
+            theLabel.text = "Label"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
