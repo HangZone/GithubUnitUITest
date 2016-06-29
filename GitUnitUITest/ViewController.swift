@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var theLabel: UILabel!
+    @IBOutlet weak var backgroundSwitch: UISwitch!
     
     @IBOutlet weak var sliderLabel: UILabel!
     @IBAction func buttonPressed(sender: AnyObject) {
@@ -17,6 +18,16 @@ class ViewController: UIViewController {
             theLabel.text = "Not a Label"
         } else {
             theLabel.text = "Label"
+        }
+    }
+    
+    @IBAction func backgroundSwitched(sender: AnyObject) {
+        if backgroundSwitch.on {
+            self.view.backgroundColor = UIColor.whiteColor()
+            theLabel.textColor = UIColor.blackColor()
+        } else {
+            self.view.backgroundColor = UIColor.blackColor()
+            theLabel.textColor = UIColor.whiteColor()
         }
     }
 
