@@ -30,16 +30,25 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uiR-Vr-Bdd"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0Z-pE-nhY">
+                                <rect key="frame" x="276" y="549" width="51" height="31"/>
+                                <connections>
+                                    <action selector="backgroundSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="eAG-e5-r6h"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ngn-8L-kNW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K0d-KP-nwN"/>
                             <constraint firstItem="Ngn-8L-kNW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKI-jn-fat"/>
+                            <constraint firstItem="n0Z-pE-nhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dq4-Pc-VDs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n0Z-pE-nhY" secondAttribute="bottom" constant="20" id="wBE-Ks-Y2a"/>
                             <constraint firstItem="4bo-s8-RHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xFz-KL-LOe"/>
                             <constraint firstItem="Ngn-8L-kNW" firstAttribute="top" secondItem="4bo-s8-RHY" secondAttribute="bottom" constant="63" id="zAo-Nm-bg5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundSwitch" destination="n0Z-pE-nhY" id="Y9d-5c-Fm8"/>
                         <outlet property="theLabel" destination="4bo-s8-RHY" id="fyd-4o-RHT"/>
                     </connections>
                 </viewController>
